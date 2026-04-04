@@ -39,7 +39,7 @@ plt.ylabel("Frequency")
 plt.show()
 #Input variable distributions
 plt.figure()
-plt.hist(df['popularity'], bins=30)
+plt.hist(df['popularity'], bins=3)
 plt.title("Distribution of Popularity")
 plt.xlabel("Popularity")
 plt.ylabel("Frequency")
