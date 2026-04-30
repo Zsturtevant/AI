@@ -46,10 +46,10 @@ def identify_genre_with_azure(user_input):
     try:
         # Pass the input as a list to the client
         response = text_client.extract_key_phrases(documents=[user_input])
-        # Get phrases from the first (and only) document
+        # Get phrases from the document
         phrases = [p.lower() for p in response[0].key_phrases]
         
-        # Match Azure phrases against your JSON mapping
+        # Match Azure phrases against  JSON mapping
         for gid, gname in genre_map.items():
             if any(gname.lower() in p for p in phrases) or gname.lower() in user_input.lower():
                 return gid, gname
