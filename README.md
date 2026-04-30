@@ -5,5 +5,6 @@ needed support programs
   sklearn
   matplotlib
   seaborn
+  azure.core.credentials
 
   this is for a class project
