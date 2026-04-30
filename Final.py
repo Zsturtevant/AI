@@ -42,7 +42,7 @@ model.fit(X, y)
 text_client = TextAnalyticsClient(endpoint=ENDPOINT, credential=AzureKeyCredential(API_KEY))
 
 def identify_genre_with_azure(user_input):
-    """Uses Azure to extract key phrases and match them to your mapping."""
+    """Uses Azure to extract key phrases and match them to mapping."""
     try:
         # Pass the input as a list to the client
         response = text_client.extract_key_phrases(documents=[user_input])
